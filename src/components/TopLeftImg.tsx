@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-import TopLeftImg from '../assets/top-left-img.png';
+import TopLeft from '../assets/top-left-img.png'
 
 const TopLeftImg = () => {
     return (
-        <div>
-
+        <div className='absolute left-0 top-0 mix-blend-color-dodge z-10 w-[200px] xl:w-[400px] opacity-50'>
+            <img src={TopLeft} alt="top-left-img" />
         </div>
     );
 };
