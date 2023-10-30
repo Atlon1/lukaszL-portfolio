@@ -1,11 +1,16 @@
 import '../src/styles/tailwind.css';
 import Layout from "./components/Layout";
+import {Routes, Route} from "react-router-dom";
+import Home from "./pages/Home";
+
 
 function App() {
     return (
-        <Layout>
-            <h1>React App</h1>
 
+        <Layout>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+            </Routes>
         </Layout>
 
     );

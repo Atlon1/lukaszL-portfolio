@@ -28,14 +28,14 @@ module.exports = {
         explosion: 'url("/bg-explosion.png")',
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
+        site: 'url("../assets/site-bg.svg")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
       },
       fontFamily: {
         poppins: [`var(--font-poppins)`, 'sans-serif'],
-        sora: [`var(--font-sora)`, 'sans-serif'],
+        sora: 'sans-serif',
       },
     },
   },

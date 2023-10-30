@@ -5,7 +5,7 @@ import TopLeftImg from "./TopLeftImg";
 
 const Layout = ({ children } : { children: React.ReactNode }) => {
     return (
-        <div>
+        <div className='page bg-site text-white bg-cover bg-no-repeat font-sora relative'>
             <TopLeftImg/>
             <Nav/>
             <Header/>
