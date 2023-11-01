@@ -1,6 +1,6 @@
 import '../src/styles/tailwind.css';
 import {Routes, Route, useLocation} from "react-router-dom";
-import {AnimatePresence, motion} from "framer-motion";
+import { motion} from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -18,7 +18,6 @@ function App() {
     return (
 
         <Layout>
-            <AnimatePresence mode='wait'>
                 <motion.div key={location.pathname} className='h-full'>
                     <Transition/>
                     <Routes>
@@ -30,8 +29,6 @@ function App() {
                         <Route path="/contact" element={<Contact/>}/>
                     </Routes>
                 </motion.div>
-            </AnimatePresence>
-
         </Layout>
 
     );

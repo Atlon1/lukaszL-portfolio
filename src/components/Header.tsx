@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
+        <header className='absolute z-30 w-full'>
             Header
-        </div>
+        </header>
     );
 };
 
