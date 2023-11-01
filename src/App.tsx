@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
+import Transition from "./components/Transition";
 
 
 function App() {
@@ -17,14 +18,20 @@ function App() {
     return (
 
         <Layout>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/services" element={<Services/>}/>
-                <Route path="/work" element={<Work/>}/>
-                <Route path="/testimonials" element={<Testimonials/>}/>
-                <Route path="/contact" element={<Contact/>}/>
-            </Routes>
+            <AnimatePresence mode='wait'>
+                <motion.div key={location.pathname} className='h-full'>
+                    <Transition/>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/services" element={<Services/>}/>
+                        <Route path="/work" element={<Work/>}/>
+                        <Route path="/testimonials" element={<Testimonials/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                    </Routes>
+                </motion.div>
+            </AnimatePresence>
+
         </Layout>
 
     );
