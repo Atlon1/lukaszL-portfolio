@@ -1,6 +1,6 @@
 import '../src/styles/tailwind.css';
 import {Routes, Route, useLocation} from "react-router-dom";
-import { motion} from "framer-motion";
+import {motion} from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -18,17 +18,17 @@ function App() {
     return (
 
         <Layout>
-                <motion.div key={location.pathname} className='h-full'>
-                    <Transition/>
-                    <Routes>
-                        <Route path="/" element={<Home/>}/>
-                        <Route path="/about" element={<About/>}/>
-                        <Route path="/services" element={<Services/>}/>
-                        <Route path="/work" element={<Work/>}/>
-                        <Route path="/testimonials" element={<Testimonials/>}/>
-                        <Route path="/contact" element={<Contact/>}/>
-                    </Routes>
-                </motion.div>
+            <motion.div key={location.pathname} className='h-full'>
+                <Transition/>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="/services" element={<Services/>}/>
+                    <Route path="/work" element={<Work/>}/>
+                    <Route path="/testimonials" element={<Testimonials/>}/>
+                    <Route path="/contact" element={<Contact/>}/>
+                </Routes>
+            </motion.div>
         </Layout>
 
     );
