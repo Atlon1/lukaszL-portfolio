@@ -21,12 +21,12 @@ function App() {
             <motion.div key={location.pathname} className='h-full'>
                 <Transition/>
                 <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="/services" element={<Services/>}/>
-                    <Route path="/work" element={<Work/>}/>
-                    <Route path="/testimonials" element={<Testimonials/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
+                    <Route path="lukaszL-portfolio/" element={<Home/>}/>
+                    <Route path="lukaszL-portfolio/about" element={<About/>}/>
+                    <Route path="lukaszL-portfolio/services" element={<Services/>}/>
+                    <Route path="lukaszL-portfolio/work" element={<Work/>}/>
+                    <Route path="lukaszL-portfolio/testimonials" element={<Testimonials/>}/>
+                    <Route path="lukaszL-portfolio/contact" element={<Contact/>}/>
                 </Routes>
             </motion.div>
         </Layout>
