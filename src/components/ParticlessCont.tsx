@@ -13,7 +13,7 @@ const ParticlessCont = () => {
 
     return (
         <Particles
-            className='w-full h-full absolute translate-z-0'
+            className='w-full h-full md:h-[550px] absolute translate-z-0'
             id='tsparticles'
             init={particlesInit}
             loaded={particlesLoaded}
@@ -39,7 +39,7 @@ const ParticlessCont = () => {
                     },
                     modes: {
                         push: {
-                            quantity: 50,
+                            quantity: 90,
                         },
                         repulse: {
                             distance: 200,
