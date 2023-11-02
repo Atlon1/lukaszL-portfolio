@@ -5,6 +5,7 @@ import Avatar from "../components/Avatar";
 
 import {motion} from "framer-motion";
 import {fadeIn} from '../variants'
+import ParticlessCont from "../components/ParticlessCont";
 
 const Home = () => {
     return (
@@ -55,6 +56,7 @@ const Home = () => {
                     exit='hidden'
                     className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 opacity-90'>
                 </motion.div>
+                <ParticlessCont/>
                 <motion.div
                     variants={fadeIn('down', 0.5)}
                     initial='hidden'
