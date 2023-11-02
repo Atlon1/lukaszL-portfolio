@@ -17,18 +17,18 @@ type Link = {
     icon: any;
 };
 export const navData: Link[] = [
-    {name: 'home', path: '/', icon: <HiHome/>},
-    {name: 'about', path: '/about', icon: <HiUser/>},
-    {name: 'services', path: '/services', icon: <HiRectangleGroup/>},
-    {name: 'work', path: '/work', icon: <HiViewColumns/>},
+    {name: 'home', path: 'lukaszL-portfolio/', icon: <HiHome/>},
+    {name: 'about', path: 'lukaszL-portfolio/about', icon: <HiUser/>},
+    {name: 'services', path: 'lukaszL-portfolio/services', icon: <HiRectangleGroup/>},
+    {name: 'work', path: 'lukaszL-portfolio/work', icon: <HiViewColumns/>},
     {
         name: 'testimonials',
-        path: '/testimonials',
+        path: 'lukaszL-portfolio/testimonials',
         icon: <HiChatBubbleBottomCenterText/>,
     },
     {
         name: 'contact',
-        path: '/contact',
+        path: 'lukaszL-portfolio/contact',
         icon: <HiEnvelope/>,
     },
 ];
