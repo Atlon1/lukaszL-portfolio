@@ -102,7 +102,7 @@ const About = () => {
                 },
                 {
                     title: 'Starszy ślusarz narzędziowy - Phoenix Contact',
-                    stage: '01.09.2017 - 01.02.2022',
+                    stage: '09.2017 - 02.2022',
                 },
             ],
         },
@@ -110,12 +110,76 @@ const About = () => {
             title: 'Umiejętoności',
             info: [
                 {
-                    title: 'Mł technolog. - Phoenix Contact',
-                    stage: '01.02.2022 - obecnie',
+                    title: 'Dobra znajomość rysunku technicznego.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
                 },
                 {
-                    title: 'Starszy ślusarz narzędziowy - Phoenix Contact',
-                    stage: '01.09.2017 - 01.02.2022',
+                    title: 'Bardzo dobra znajomość budowy form wtryskowych oraz ich działanie.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Umiejętność analizowania form wtryskowych.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Kreatywne oraz innowacyjne metody rozwiązywania problemów.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Umiejętność planowania.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Umiejętność korzystania z systemów ERP.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Umiejętność tworzenia oraz sterowania procesem.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Umiejętność podejmowania trudnych decyzji.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Umiejętność korzystania  z narzędzi jakościowych.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Dyspozycyjność i zaangażowanie.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Komunikatywność i praca zespołowa.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Obsługa Teamcenter – Creo - Autocad - Exel - Sap.',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
                 },
             ],
         },
@@ -131,8 +195,8 @@ const About = () => {
                     stage: '',
                 },
                 {
-                    title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-                    stage: '2006',
+                    title: 'Certyfikat OPENMIND Microsoft Excel poziom Zaawansowany',
+                    stage: '2023',
                 },
             ],
         },
@@ -143,7 +207,7 @@ const About = () => {
 
 
     return (
-        <div className='h-full bg-primary/30 py-32 text-center xl:text-left overflow-auto'>
+        <div className='h-full bg-primary/30 xl:py-32 text-center xl:text-left overflow-auto'>
             <Circles/>
             <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 '>
                 <div className='flex-1 flex flex-col justify-center'>
@@ -175,7 +239,7 @@ const About = () => {
                         className='hidden md:flex md:max-w-xl xl:max-w-none max-auto xl:mx-0 mb-24'>
                         <div className='flex flex-1 xl:gap-x-6'>
                             <div
-                                className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
+                                className='relative flex-1 flex flex-col items-center justify-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
                                     <CountUp start={0} end={2} duration={5}/>
                                 </div>
@@ -184,7 +248,7 @@ const About = () => {
                                 </div>
                             </div>
                             <div
-                                className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
+                                className='relative flex-1 flex flex-col items-center justify-center after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
                                     <CountUp start={0} end={15} duration={5}/>
                                 </div>
@@ -192,7 +256,7 @@ const About = () => {
                                     Zadowoloni klienci
                                 </div>
                             </div>
-                            <div className='relative flex-1 '>
+                            <div className='relative flex-1 flex flex-col items-center justify-center'>
                                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
                                     <CountUp start={0} end={12} duration={5}/>
                                 </div>
@@ -208,7 +272,7 @@ const About = () => {
                     initial='hidden'
                     animate='show'
                     exit='hidden'
-                    className='flex flex-col xl:max-w-[50%] w-full h-full'>
+                    className='flex flex-col xl:max-w-[45%] w-full h-full xl:mr-20 mr-0 xl:mt-60 mt-0'>
                     <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
                         {aboutData.map((item, itemIndex) => {
                             return (
@@ -222,7 +286,7 @@ const About = () => {
                             )
                         })}
                     </div>
-                    <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+                    <div className='pt-2 pb-28 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
                         {aboutData[index].info.map((item, itemIndex) => {
                             return (
                                 <div

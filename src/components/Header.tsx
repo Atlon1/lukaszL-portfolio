@@ -16,11 +16,10 @@ const Header = () => {
                    exit='hidden'
                    className='container mx-auto'>
                    <div className='flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8'>
-                       <a href='ava224@wp.pl' className='flex items-center'>
+                       <a href='mailto:ava224@wp.pl' className='flex items-center'>
                            <div className='text-4xl'>
                                <span className='font-semibold'>Łukasz</span> Lisek<span className='text-accent'>.</span>
                            </div>
-
                        </a>
                        <Social/>
                    </div>

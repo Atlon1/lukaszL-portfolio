@@ -8,7 +8,7 @@ const Layout = ({ children } : { children: React.ReactNode }) => {
         <div className='page bg-site text-white bg-cover bg-no-repeat font-sora relative'>
             <TopLeftImg/>
             <Nav/>
-            <Header/>
+
             {children}
         </div>
     );
