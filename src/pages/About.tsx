@@ -25,70 +25,39 @@ const About = () => {
             info: [
                 {
                     title: 'Projektowanie procesów',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
+
                 },
                 {
                     title: 'Opytmalizacja procesów',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStar/>,<BsStar/>
-                    ]
+
                 },
                 {
                     title: 'Nadzór nad projektami',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Zamawianie materiału oraz normaliów',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStar/>,<BsStar/>,<BsStar/>
-                    ]
 
                 },
                 {
                     title: 'Rozwiązaywanie problemów technologicznych',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Wspieranie konstrukcji w przygotowywaniu koncepcji zmian konstrukcyjnych',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Tworzenie ofert na wykonanie inspekcji oraz na zmiany konstrukcyjne',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Kontakt z podwykonawcami krajowymi oraz zagranicznymi',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Tworzeni raportów w programie MS exel ',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Wspieranie zespołu w prowadzeniu projektów',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
                 {
                     title: 'Zgłaszanie projektów oszczędnościowych BITE',
-                    icons: [
-                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
-                    ]
                 },
 
             ],
@@ -293,7 +262,7 @@ const About = () => {
                                     className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'
                                     key={itemIndex}>
                                     <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-                                    <div className='hidden md:flex'>-</div>
+                                    <div className='hidden md:flex'></div>
                                     <div>{item.stage}</div>
                                     <div className='flex gap-x-4'>
                                         {item.icons?.map((icon, iconIndex) => {
