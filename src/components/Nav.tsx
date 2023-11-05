@@ -19,9 +19,7 @@ type Link = {
 export const navData: Link[] = [
     {name: 'home', path: '/lukaszL-portfolio/', icon: <HiHome/>},
     {name: 'about', path: '/lukaszL-portfolio/about', icon: <HiUser/>},
-    {name: 'services', path: '/lukaszL-portfolio/services', icon: <HiRectangleGroup/>},
     {name: 'work', path: '/lukaszL-portfolio/work', icon: <HiViewColumns/>},
-    {name: 'testimonials', path: '/lukaszL-portfolio/testimonials', icon: <HiChatBubbleBottomCenterText/>,},
     {name: 'contact', path: '/lukaszL-portfolio/contact', icon: <HiEnvelope/>,},
 ];
 

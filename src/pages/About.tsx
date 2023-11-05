@@ -1,27 +1,13 @@
 import React, {useState} from 'react';
 
-import {
-    FaHtml5,
-    FaCss3,
-    FaJs,
-    FaReact,
-    FaWordpress,
-    FaFigma,
-} from "react-icons/fa";
-
-import {
-    SiNextdotjs,
-    SiFramer,
-    SiAdobexd,
-    SiAdobephotoshop,
-} from "react-icons/si";
 import Circles from "../components/Circles";
-import Avatar from "../components/Avatar";
+import {BsStarFill, BsStar} from "react-icons/bs";
 
 import {motion} from "framer-motion";
 import {fadeIn} from "../variants";
 
 import CountUp from 'react-countup';
+
 
 type AboutData = {
     title: string;
@@ -35,36 +21,101 @@ const About = () => {
 
     const aboutData: AboutData[] = [
         {
-            title: 'Umiejętności',
+            title: 'Czym sie zajmuje?',
             info: [
                 {
                     title: 'Projektowanie procesów',
                     icons: [
-                        <FaHtml5/>,
-                        <FaCss3/>,
-                        <FaJs/>,
-                        <FaReact/>,
-                        <SiNextdotjs/>,
-                        <SiFramer/>,
-                        <FaWordpress/>,
-                    ],
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
                 },
                 {
-                    title: 'UI/UX Design',
-                    icons: [<FaFigma/>, <SiAdobexd/>, <SiAdobephotoshop/>],
+                    title: 'Opytmalizacja procesów',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStar/>,<BsStar/>
+                    ]
                 },
+                {
+                    title: 'Nadzór nad projektami',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Zamawianie materiału oraz normaliów',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStar/>,<BsStar/>,<BsStar/>
+                    ]
+
+                },
+                {
+                    title: 'Rozwiązaywanie problemów technologicznych',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Wspieranie konstrukcji w przygotowywaniu koncepcji zmian konstrukcyjnych',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Tworzenie ofert na wykonanie inspekcji oraz na zmiany konstrukcyjne',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Kontakt z podwykonawcami krajowymi oraz zagranicznymi',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Tworzeni raportów w programie MS exel ',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Wspieranie zespołu w prowadzeniu projektów',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+                {
+                    title: 'Zgłaszanie projektów oszczędnościowych BITE',
+                    icons: [
+                        <BsStarFill/>, <BsStarFill/>, <BsStarFill/>,<BsStarFill/>,<BsStar/>
+                    ]
+                },
+
             ],
         },
         {
             title: 'Doświadczenie',
             info: [
                 {
-                    title: 'Webby Awards - Honoree',
-                    stage: '2011 - 2012',
+                    title: 'Mł technolog. - Phoenix Contact',
+                    stage: '01.02.2022 - obecnie',
                 },
                 {
-                    title: 'Adobe Design Achievement Awards - Finalist',
-                    stage: '2009 - 2010',
+                    title: 'Starszy ślusarz narzędziowy - Phoenix Contact',
+                    stage: '01.09.2017 - 01.02.2022',
+                },
+            ],
+        },
+        {
+            title: 'Umiejętoności',
+            info: [
+                {
+                    title: 'Mł technolog. - Phoenix Contact',
+                    stage: '01.02.2022 - obecnie',
+                },
+                {
+                    title: 'Starszy ślusarz narzędziowy - Phoenix Contact',
+                    stage: '01.09.2017 - 01.02.2022',
                 },
             ],
         },
@@ -72,12 +123,12 @@ const About = () => {
             title: 'Certyfikaty',
             info: [
                 {
-                    title: 'Web Development - ABC University, LA, CA',
-                    stage: '2011',
+                    title: 'Uprawnienia na wózki jezdniowe podnośnikowe z wyłączeniem specjalistycznych',
+                    stage: '',
                 },
                 {
-                    title: 'Computer Science Diploma - AV Technical Institute',
-                    stage: '2009',
+                    title: 'Uprawnienia na suwnice',
+                    stage: '',
                 },
                 {
                     title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
@@ -92,9 +143,9 @@ const About = () => {
 
 
     return (
-        <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+        <div className='h-full bg-primary/30 py-32 text-center xl:text-left overflow-auto'>
             <Circles/>
-            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
+            <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 '>
                 <div className='flex-1 flex flex-col justify-center'>
                     <motion.h2
                         variants={fadeIn('right', 0.2)}
@@ -157,7 +208,7 @@ const About = () => {
                     initial='hidden'
                     animate='show'
                     exit='hidden'
-                    className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
+                    className='flex flex-col xl:max-w-[50%] w-full h-full'>
                     <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
                         {aboutData.map((item, itemIndex) => {
                             return (

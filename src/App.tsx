@@ -4,9 +4,7 @@ import {motion} from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
 import Work from "./pages/Work";
-import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Transition from "./components/Transition";
 
@@ -24,9 +22,7 @@ function App() {
                 <Routes>
                     <Route path="lukaszL-portfolio/" element={<Home/>}/>
                     <Route path="lukaszL-portfolio/about" element={<About/>}/>
-                    <Route path="lukaszL-portfolio/services" element={<Services/>}/>
                     <Route path="lukaszL-portfolio/work" element={<Work/>}/>
-                    <Route path="lukaszL-portfolio/testimonials" element={<Testimonials/>}/>
                     <Route path="lukaszL-portfolio/contact" element={<Contact/>}/>
                 </Routes>
             </motion.div>
