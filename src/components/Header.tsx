@@ -8,7 +8,7 @@ const Header = () => {
 
 
     return (
-           <header className='z-10 w-full flex items-center px-16 xl:px-0 xl:h-[90px]'>
+           <header className='xl:absolute z-10 w-full flex items-center px-16 xl:px-0 xl:h-[90px]'>
                <motion.div
                    variants={fadeIn('down', 0.5)}
                    initial='hidden'

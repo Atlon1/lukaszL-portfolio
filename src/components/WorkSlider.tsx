@@ -47,10 +47,19 @@ const WorkSlider = () => {
         ],
     };
 
+    import {Swiper, SwiperSlide} from "swiper/swiper-react";
+    import 'swiper/css';
+    import 'swiper/css/pagination';
+    import 'swiper/css/free-mode';
+
+    import {Pagination} from 'swiper';
+
+    import { BsArrowRight } from 'react-icons/bs';
+
     return (
-        <div>
-            WorkSlider
-        </div>
+        <Swiper>
+
+        </Swiper>
     );
 };
 

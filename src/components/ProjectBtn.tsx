@@ -9,7 +9,7 @@ const ProjectBtn = () => {
         <div className='mx-auto xl:mx-0 z-10'>
             <Link
                 className='xl:relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group'
-                to="/work">
+                to="/lukaszL-portfolio/work">
                 <img
                     className='animate-spin-slow w-full h-full max-w-[141px] max-h-[148px]'
                     src={RoundedText} alt="project" />
