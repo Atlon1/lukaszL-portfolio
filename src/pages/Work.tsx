@@ -4,6 +4,7 @@ import Circles from "../components/Circles";
 
 import {motion} from "framer-motion";
 import { fadeIn } from "../variants";
+import WorkSlider from "../components/WorkSlider";
 
 
 const Work = () => {
@@ -20,8 +21,12 @@ const Work = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
+                    <div className='w-full xl:max-w-[60%]'>
+                        <WorkSlider/>
+                    </div>
                 </div>
             </div>
+            <Bulb/>
         </div>
     );
 };
