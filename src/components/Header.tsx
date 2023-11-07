@@ -8,7 +8,7 @@ const Header = () => {
 
 
     return (
-           <header className='xl:absolute z-10 w-full flex items-center px-16 xl:px-0 xl:h-[90px]'>
+           <header className='absolute z-20 w-full flex items-center px-16 xl:px-0 xl:h-[90px]'>
                <motion.div
                    variants={fadeIn('down', 0.5)}
                    initial='hidden'
@@ -17,7 +17,7 @@ const Header = () => {
                    className='container mx-auto'>
                    <div className='flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8'>
                        <a href='mailto:ava224@wp.pl' className='flex items-center'>
-                           <div className='text-4xl'>
+                           <div className='xl:text-4xl text-2xl'>
                                <span className='font-semibold'>Łukasz</span> Lisek<span className='text-accent'>.</span>
                            </div>
                        </a>
