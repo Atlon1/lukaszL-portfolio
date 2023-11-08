@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {BsArrowRight} from "react-icons/bs";
 import {motion} from "framer-motion";
 import {fadeIn} from "../variants";
 import Bulb from "../components/Bulb";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+    const formData = useRef();
 
     const validateName = (name: string) => {
         if (name.length < 3) {
@@ -51,21 +54,21 @@ const Contact = () => {
     }
 
 
-    const [form, setForm] = React.useState({
+    const [form, setForm] = useState({
         name: '',
         email: '',
         subject: '',
         message: ''
     })
 
-    const [error, setError] = React.useState<{ name: string | null, email: string | null, subject: string | null, message: string | null }>({
+    const [error, setError] = useState<{ name: string | null, email: string | null, subject: string | null, message: string | null }>({
         name: null,
         email: null,
         subject: null,
         message: null
     })
-    const [thanks, setThanks] = React.useState(<div></div>)
-    const [borderColor, setBorderColor] = React.useState('')
+    const [thanks, setThanks] = useState(<div></div>)
+    const [borderColor, setBorderColor] = useState('')
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
         setForm({
@@ -99,6 +102,7 @@ const Contact = () => {
                 message: null
             })
             setBorderColor('')
+            emailjs.sendForm('service_1d5lzg4', 'template_qn9et3x', formData.current as any, 'WfT1Ydqf0OJBucEf-')
 
             setForm({...form, name: '', email: '', subject: '', message: ''})
 
@@ -107,11 +111,18 @@ const Contact = () => {
                     Dziękuje za wiadomość!!
                 </div>
             )
-
-
         }
-
     }
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setBorderColor('')
+            setThanks(<div></div>)
+        }, 3000)
+        return () => {
+            clearTimeout(timeout)
+        }
+    }, [thanks])
 
 
     return (
@@ -132,6 +143,7 @@ const Contact = () => {
                         animate='show'
                         exit='hidden'
                         onSubmit={handleSend}
+                        ref={formData as any}
                         className='flex-1 flex flex-col gap-6 w-full mx-auto'>
                         <div className='flex gap-x-6 w-full'>
                             <div className='w-full text-center'>
