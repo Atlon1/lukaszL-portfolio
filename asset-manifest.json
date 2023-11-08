@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lukaszL-portfolio/static/css/main.72f3b61f.css",
-    "main.js": "/lukaszL-portfolio/static/js/main.b848adf4.js",
+    "main.css": "/lukaszL-portfolio/static/css/main.61acf5fb.css",
+    "main.js": "/lukaszL-portfolio/static/js/main.6ef0e73f.js",
     "static/media/bg-explosion (1).png": "/lukaszL-portfolio/static/media/bg-explosion (1).f14d0e036738200e03e5.png",
     "static/media/circles.png": "/lukaszL-portfolio/static/media/circles.73f92270cdef7e342fc7.png",
     "static/media/bulb.png": "/lukaszL-portfolio/static/media/bulb.d613268c085dc67ec8d3.png",
@@ -14,11 +14,11 @@
     "static/media/circle-star.svg": "/lukaszL-portfolio/static/media/circle-star.df1efd025257011930e3.svg",
     "static/media/site-bg.svg": "/lukaszL-portfolio/static/media/site-bg.429740fd596837e33b07.svg",
     "index.html": "/lukaszL-portfolio/index.html",
-    "main.72f3b61f.css.map": "/lukaszL-portfolio/static/css/main.72f3b61f.css.map",
-    "main.b848adf4.js.map": "/lukaszL-portfolio/static/js/main.b848adf4.js.map"
+    "main.61acf5fb.css.map": "/lukaszL-portfolio/static/css/main.61acf5fb.css.map",
+    "main.6ef0e73f.js.map": "/lukaszL-portfolio/static/js/main.6ef0e73f.js.map"
   },
   "entrypoints": [
-    "static/css/main.72f3b61f.css",
-    "static/js/main.b848adf4.js"
+    "static/css/main.61acf5fb.css",
+    "static/js/main.6ef0e73f.js"
   ]
 }
