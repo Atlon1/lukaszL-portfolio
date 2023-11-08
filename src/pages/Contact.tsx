@@ -5,6 +5,65 @@ import {fadeIn} from "../variants";
 import Bulb from "../components/Bulb";
 
 const Contact = () => {
+
+    const validateName = (name: string) => {
+        if (name.length < 3) {
+            return "Imię jest za krótkie!"
+        } else if (name.length > 20) {
+            return "Imię jest za długi!"
+        } else if (!name) {
+            return "Musisz podać imię!"
+        }
+        return null
+    }
+
+
+    const [form, setForm] = React.useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    const [error, setError] = React.useState<{ name: string | null, email: string | null, subject: string | null, message: string | null }>({
+        name: null,
+        email: null,
+        subject: null,
+        message: null
+    })
+
+    const [borderColor, setBorderColor] = React.useState('')
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSend = (e: any) => {
+        e.preventDefault()
+        const nameError = validateName(form.name)
+
+        if (nameError) {
+            setError({
+                ...error,
+                name: nameError
+            })
+            setBorderColor('1px solid red')
+        } else {
+            setError({
+                ...error,
+                name: null
+            })
+            setBorderColor('')
+
+            setForm({...form, name: '', email: '', subject: '', message: ''})
+        }
+
+    }
+
+
     return (
         <div className='h-full bg-primary/30'>
             <Bulb/>
@@ -22,14 +81,45 @@ const Contact = () => {
                         initial='hidden'
                         animate='show'
                         exit='hidden'
+                        onSubmit={handleSend}
                         className='flex-1 flex flex-col gap-6 w-full mx-auto'>
                         <div className='flex gap-x-6 w-full'>
-                            <input type='text' placeholder='Name' className='input'/>
-                            <input type='text' placeholder='Emial' className='input'/>
+                            <div className='w-full'>
+                                <input
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    name='name'
+                                    type='text'
+                                    placeholder='Name'
+                                    className='input'/>
+                                <div style={{color: "red"}}>{error.name}</div>
+                            </div>
+                            <div className='w-full'>
+                                <input
+                                    onChange={handleChange}
+                                    value={form.email}
+                                    name='email'
+                                    type='text'
+                                    placeholder='Emial'
+                                    className='input'/>
+                                <div></div>
+                            </div>
                         </div>
-                        <input type='text' placeholder='subject' className='input'/>
-                        <textarea placeholder='message' className='textarea'></textarea>
+                        <input
+                            name='subject'
+                            value={form.subject}
+                            onChange={handleChange}
+                            type='text'
+                            placeholder='subject'
+                            className='input'/>
+                        <textarea
+                            name='message'
+                            value={form.message}
+                            onChange={handleChange}
+                            placeholder='message'
+                            className='textarea'/>
                         <button
+                            type='submit'
                             className='btn rounded-full border border-white/50 max-w-[170px] p-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
                             <span
                                 className='group-hover:translate-y-[120%] group-hover:opacity-0 transition-all duration-300'>
