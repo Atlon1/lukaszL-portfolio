@@ -17,6 +17,39 @@ const Contact = () => {
         return null
     }
 
+    const validateEmail = (email: string) => {
+        if (!email) {
+            return "Musisz podać email!"
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+            return "Email jest nieprawidłowy!"
+        } else if (email.length > 50) {
+            return "Email jest za długi!"
+        }
+        return null
+    }
+
+    const validateSubject = (subject: string) => {
+        if (subject.length < 3) {
+            return "Temat jest za krótki!"
+        } else if (subject.length > 50) {
+            return "Temat jest za długi!"
+        } else if (!subject) {
+            return "Musisz podać temat!"
+        }
+        return null
+    }
+
+    const validateMessage = (message: string) => {
+        if (message.length < 3) {
+            return "Wiadomość jest za krótka!"
+        } else if (message.length > 500) {
+            return "Wiadomość jest za długa!"
+        } else if (!message) {
+            return "Musisz podać wiadomość!"
+        }
+        return null
+    }
+
 
     const [form, setForm] = React.useState({
         name: '',
@@ -31,7 +64,7 @@ const Contact = () => {
         subject: null,
         message: null
     })
-
+    const [thanks, setThanks] = React.useState(<div></div>)
     const [borderColor, setBorderColor] = React.useState('')
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -44,21 +77,38 @@ const Contact = () => {
     const handleSend = (e: any) => {
         e.preventDefault()
         const nameError = validateName(form.name)
+        const emailError = validateEmail(form.email)
+        const subjectError = validateSubject(form.subject)
+        const messageError = validateMessage(form.message)
 
-        if (nameError) {
+        if (nameError || emailError || subjectError || messageError) {
             setError({
                 ...error,
-                name: nameError
+                name: nameError,
+                email: emailError,
+                subject: subjectError,
+                message: messageError
             })
             setBorderColor('1px solid red')
         } else {
             setError({
                 ...error,
-                name: null
+                name: null,
+                email: null,
+                subject: null,
+                message: null
             })
             setBorderColor('')
 
             setForm({...form, name: '', email: '', subject: '', message: ''})
+
+            return setThanks(
+                <div className='text-green-500'>
+                    Dziękuje za wiadomość!!
+                </div>
+            )
+
+
         }
 
     }
@@ -84,7 +134,7 @@ const Contact = () => {
                         onSubmit={handleSend}
                         className='flex-1 flex flex-col gap-6 w-full mx-auto'>
                         <div className='flex gap-x-6 w-full'>
-                            <div className='w-full'>
+                            <div className='w-full text-center'>
                                 <input
                                     value={form.name}
                                     onChange={handleChange}
@@ -94,7 +144,7 @@ const Contact = () => {
                                     className='input'/>
                                 <div style={{color: "red"}}>{error.name}</div>
                             </div>
-                            <div className='w-full'>
+                            <div className='w-full text-center'>
                                 <input
                                     onChange={handleChange}
                                     value={form.email}
@@ -102,22 +152,28 @@ const Contact = () => {
                                     type='text'
                                     placeholder='Emial'
                                     className='input'/>
-                                <div></div>
+                                <div style={{color: "red"}}>{error.email}</div>
                             </div>
                         </div>
-                        <input
-                            name='subject'
-                            value={form.subject}
-                            onChange={handleChange}
-                            type='text'
-                            placeholder='subject'
-                            className='input'/>
+                        <div className='w-full text-center'>
+
+                            <input
+                                name='subject'
+                                value={form.subject}
+                                onChange={handleChange}
+                                type='text'
+                                placeholder='subject'
+                                className='input'/>
+                            <div style={{color: "red"}}>{error.subject}</div>
+                        </div>
+
                         <textarea
                             name='message'
                             value={form.message}
                             onChange={handleChange}
                             placeholder='message'
                             className='textarea'/>
+                        <div style={{color: "red"}}>{error.message}</div>
                         <button
                             type='submit'
                             className='btn rounded-full border border-white/50 max-w-[170px] p-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
@@ -129,6 +185,7 @@ const Contact = () => {
                                 className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]'/>
                         </button>
                     </motion.form>
+                    {thanks}
                 </div>
             </div>
         </div>
