@@ -28,8 +28,13 @@ const Work = () => {
                             animate='show'
                             exit='hidden'
                             className='mb-4 max-w-[400px] mx-auto lg:max-0'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                            Moje umiejętności programistyczne stale się rozwijają, dzięki czemu efektywnie radzę sobie z
+                            różnorodnymi wyzwaniami. Nie tylko wykonuję zadania rutynowe, lecz także aktywnie
+                            uczestniczę w rozwijaniu zaawansowanych procesów technologicznych. Ponadto, kładę duży
+                            nacisk na efektywną komunikację w zespole, potrafiąc tłumaczyć skomplikowane koncepcje
+                            techniczne w sposób zrozumiały dla każdego. Jako młody technolog, nieustannie poszukuję
+                            nowych możliwości rozwoju poprzez udział w konferencjach branżowych, szkoleniach i
+                            warsztatach.
                         </motion.p>
                     </div>
                     <motion.div

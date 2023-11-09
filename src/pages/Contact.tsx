@@ -102,7 +102,7 @@ const Contact = () => {
                 message: null
             })
             setBorderColor('')
-            emailjs.sendForm('service_1d5lzg4', 'template_qn9et3x', formData.current as any, 'WfT1Ydqf0OJBucEf-')
+            emailjs.sendForm('service_1d5lzg4', 'template_2l5a0um', formData.current as any, 'WfT1Ydqf0OJBucEf-')
 
             setForm({...form, name: '', email: '', subject: '', message: ''})
 
@@ -188,7 +188,7 @@ const Contact = () => {
                         <div style={{color: "red"}}>{error.message}</div>
                         <button
                             type='submit'
-                            className='btn rounded-full border border-white/50 max-w-[170px] p-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
+                            className='btn rounded-full border border-white/50 max-w-[170px] p-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group z-20'>
                             <span
                                 className='group-hover:translate-y-[120%] group-hover:opacity-0 transition-all duration-300'>
                                 Wyślij Wiadomość.
