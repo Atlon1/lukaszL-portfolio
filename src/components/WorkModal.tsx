@@ -1,7 +1,6 @@
 import React from 'react';
 
-const WorkModal = ({path, title} : {path: string, title: string}) => {
-
+const WorkModal = ({path, title}: {path: string, title: string}) => {
 
 
     return (

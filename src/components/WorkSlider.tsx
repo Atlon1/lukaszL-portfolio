@@ -109,7 +109,7 @@ const WorkSlider = () => {
                                         className='absolute right-2 top-2 hover:scale-110 duration-200 cursor-pointer text-accent'>
                                         <IoCloseOutline className='text-4xl'/>
                                     </div>
-                                    <WorkModal workSlides={workSlides.images}/>
+                                    <WorkModal path={image.path} title={image.title}/>
                                 </Modal>
                             )}
                         </div>
