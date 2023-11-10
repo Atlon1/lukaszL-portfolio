@@ -23,6 +23,7 @@ const modalStyles = {
 
 type WorkSlides = {
     images: Array<{
+        id: number;
         title: string;
         path: string;
     }>;
@@ -30,11 +31,12 @@ type WorkSlides = {
 
 const workSlides : WorkSlides = {
     images: [
-        {
+        {   id: 1,
             title: 'title',
             path: thumb1,
         },
         {
+            id: 2,
             title: 'title',
             path: thumb2,
         },
@@ -69,7 +71,7 @@ const WorkSlider = () => {
             {workSlides.images.map((image, index) => {
 
                 return (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={image.id}>
                         <div className='gap-4 cursor-pointer'>
                             <div
                                 onClick={openModal}
@@ -109,7 +111,7 @@ const WorkSlider = () => {
                                         className='absolute right-2 top-2 hover:scale-110 duration-200 cursor-pointer text-accent'>
                                         <IoCloseOutline className='text-4xl'/>
                                     </div>
-                                    <WorkModal path={image.path} title={image.title}/>
+                                    <WorkModal key={image.id} path={image.path} title={image.title}/>
                                 </Modal>
                             )}
                         </div>
