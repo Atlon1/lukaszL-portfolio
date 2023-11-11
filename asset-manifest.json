@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/lukaszL-portfolio/static/css/main.bee4f19e.css",
-    "main.js": "/lukaszL-portfolio/static/js/main.4dea7c8b.js",
+    "main.css": "/lukaszL-portfolio/static/css/main.442407c8.css",
+    "main.js": "/lukaszL-portfolio/static/js/main.f9702b03.js",
     "static/media/bg-explosion (1).png": "/lukaszL-portfolio/static/media/bg-explosion (1).f14d0e036738200e03e5.png",
     "static/media/circles.png": "/lukaszL-portfolio/static/media/circles.73f92270cdef7e342fc7.png",
     "static/media/bulb.png": "/lukaszL-portfolio/static/media/bulb.d613268c085dc67ec8d3.png",
     "static/media/top-left-img.png": "/lukaszL-portfolio/static/media/top-left-img.ac4ac150c03d68afe800.png",
-    "static/media/thumb2.jpg": "/lukaszL-portfolio/static/media/thumb2.72dd64aa4699733c6cfb.jpg",
-    "static/media/thumb1.jpg": "/lukaszL-portfolio/static/media/thumb1.5af307de283e42926f02.jpg",
+    "static/media/Oprawki.jpg": "/lukaszL-portfolio/static/media/Oprawki.f1471fd00e35afd635e6.jpg",
     "static/media/LukaszL.png": "/lukaszL-portfolio/static/media/LukaszL.3a7512f4cbd5e43119d8.png",
+    "static/media/ch2.jpg": "/lukaszL-portfolio/static/media/ch2.9e40a4c7595c35e0b679.jpg",
+    "static/media/ch4.jpg": "/lukaszL-portfolio/static/media/ch4.170cd589fdeae51343e1.jpg",
+    "static/media/Chłodzenie.jpg": "/lukaszL-portfolio/static/media/Chłodzenie.414b27d64c1f8d7cfb37.jpg",
+    "static/media/ch1.jpg": "/lukaszL-portfolio/static/media/ch1.35381eae62485d28f7c1.jpg",
+    "static/media/ch3.jpg": "/lukaszL-portfolio/static/media/ch3.fb19b1e9b8f488a7b4f3.jpg",
+    "static/media/ch5.jpg": "/lukaszL-portfolio/static/media/ch5.e03f5cf678c5064b679c.jpg",
     "static/media/circle-star.svg": "/lukaszL-portfolio/static/media/circle-star.df1efd025257011930e3.svg",
     "static/media/site-bg.svg": "/lukaszL-portfolio/static/media/site-bg.429740fd596837e33b07.svg",
     "index.html": "/lukaszL-portfolio/index.html",
-    "main.bee4f19e.css.map": "/lukaszL-portfolio/static/css/main.bee4f19e.css.map",
-    "main.4dea7c8b.js.map": "/lukaszL-portfolio/static/js/main.4dea7c8b.js.map"
+    "main.442407c8.css.map": "/lukaszL-portfolio/static/css/main.442407c8.css.map",
+    "main.f9702b03.js.map": "/lukaszL-portfolio/static/js/main.f9702b03.js.map"
   },
   "entrypoints": [
-    "static/css/main.bee4f19e.css",
-    "static/js/main.4dea7c8b.js"
+    "static/css/main.442407c8.css",
+    "static/js/main.f9702b03.js"
   ]
 }
