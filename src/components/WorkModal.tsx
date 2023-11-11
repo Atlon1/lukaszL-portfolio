@@ -30,7 +30,7 @@ const WorkModal = ({workSlides}: any) => {
                         pagination={{
                             clickable: true,
                         }}
-                        className='max-w-[400px] w-full h-full'
+                        className='max-w-[350px] w-full h-full'
                     >
                         {path.map((path: string) => (
                             <SwiperSlide>
