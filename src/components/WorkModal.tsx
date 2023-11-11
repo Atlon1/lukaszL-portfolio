@@ -1,13 +1,24 @@
 import React from 'react';
 
-const WorkModal = ({path, title}: {path: string, title: string}) => {
+type WorkModalProps = {
+    id: number,
+    path: string,
+    title: string,
+    description: string
+}
+const WorkModal = ({workSlides}: any) => {
 
+
+    const { path, title, description} = workSlides;
+
+    console.log(workSlides[0]);
 
     return (
         <div>
-            Modal
+
             <img src={path} alt={title}/>
-            </div>
+            <div className='text-white'>{description}</div>
+        </div>
     );
 };
 
