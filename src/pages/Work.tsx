@@ -78,7 +78,12 @@ const Work = () => {
                             techniczne w sposób zrozumiały dla każdego.
                         </motion.p>
                     </div>
-                    <div className='w-full xl:w-[50vw] xl:max-w-[60%] '>
+                    <motion.div
+                        variants={fadeIn('down', 0.4)}
+                        initial='hidden'
+                        animate='show'
+                        exit='hidden'
+                        className='w-full xl:w-[50vw] xl:max-w-[60%] '>
                         <Swiper
                             spaceBetween={10}
                             pagination={{
@@ -99,7 +104,7 @@ const Work = () => {
                                 })}
                             </div>
                         </Swiper>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <Bulb/>
