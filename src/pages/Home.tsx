@@ -28,11 +28,11 @@ const Home = () => {
                             <span className='text-accent'>
                             <TypeAnimation
                                 sequence={[
-                                    'Technologiem.',
+                                    'Technologiem',
                                     3000,
-                                    'Programista.',
+                                    'Programista',
                                     3000,
-                                    'Planistą produkcji.',
+                                    'Planistą produkcji',
                                     3000
                                 ]}
                                 speed={30}
