@@ -66,9 +66,14 @@ const Home = () => {
                             className='xl:hidden md:flex justify-center hidden relative mb-0 md:mb-12'>
                             <ProjectBtn/>
                         </motion.div>
-                        <div className='md:hidden sm:flex w-full h-full max-w-[300px] max-h-[200px] absolute bottom-[150px] right-2 z-0 opacity-50'>
-                            <img src={Lukasz} alt='lukasz'/>
-                        </div>
+                        <motion.div
+                            variants={fadeIn('up', 0.3)}
+                            initial='hidden'
+                            animate='show'
+                            exit='hidden'
+                            className='md:hidden sm:flex w-full h-full max-w-[300px] max-h-[200px] absolute bottom-[150px] right-2 z-0 '>
+                            <img className='opacity-50' src={Lukasz} alt='lukasz'/>
+                        </motion.div>
                         <motion.div
                             variants={fadeIn('down', 0.4)}
                             initial='hidden'
